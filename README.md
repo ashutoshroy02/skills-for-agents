@@ -18,4 +18,6 @@ The models are getting better, but the default prompt engineering is still tryin
 
 Karm kare. Build the thing. Stop the fluff. 
 
+Expect more skills. We're just getting started. I've got a bunch of ideas pinned for later.
+
 less goo.
