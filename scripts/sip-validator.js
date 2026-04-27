@@ -21,18 +21,21 @@ function validateSkill(skillPath) {
     }
 
     const content = fs.readFileSync(skillMdPath, 'utf8');
-    const fmMatch = content.match(/^---\n([\s\S]+?)\n---/);
+    const fmMatch = content.match(/^---\n([\s\S]+?)\n---\n/);
 
     if (!fmMatch) {
         errors.push('Missing or malformed frontmatter (---)');
     } else {
-        const fmLines = fmMatch[1].split('\n');
+        const fmSection = fmMatch[1];
         const fm = {};
-        fmLines.forEach(line => {
-            const parts = line.split(':');
-            if (parts.length >= 2) {
-                const key = parts[0].trim();
-                const val = parts.slice(1).join(':').trim();
+        
+        // Better line-by-line parsing for basic YAML-like structure
+        const lines = fmSection.split('\n');
+        lines.forEach(line => {
+            const match = line.match(/^(\w+):\s*(.*)/);
+            if (match) {
+                const key = match[1].trim();
+                const val = match[2].trim();
                 fm[key] = val;
             }
         });

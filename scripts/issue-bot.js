@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const apiKey = process.env.GEMINI_API_KEY || 'AIzaSyDHNu71fCDZqu2E0hR4BD9NcUYMnXWMdBU'; // Fallback to memory key for testing
+const apiKey = process.env.GEMINI_API_KEY;
 const issueTitle = process.env.ISSUE_TITLE || 'No Title';
 const issueBody = process.env.ISSUE_BODY || 'No Body provided';
 
