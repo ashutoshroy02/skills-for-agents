@@ -1,6 +1,6 @@
 # Caveman
 
-Ultra-terse communication mode. Cuts token usage ~75% while keeping full technical accuracy.
+Ultra-terse communication mode. Cuts token usage 30-95% while keeping full technical accuracy.
 
 ## Domain
 
@@ -17,8 +17,10 @@ Ultra-terse communication mode. Cuts token usage ~75% while keeping full technic
 | Level | Reduction | Style | Use When |
 |-------|-----------|-------|----------|
 | **lite** | ~30% | No filler/hedging. Keep articles + full sentences. Professional but tight. | Light cleanup, keep readability |
-| **full** | ~50% | Drop articles, fragments OK, short synonyms. Classic caveman. | General compression, good balance |
-| **ultra** | ~75% | Abbreviate (DB/auth/config), arrows for causality (X → Y), one word when enough. | Maximum compression, telegraphic |
+| **full** | ~50-60% | Drop articles, fragments OK, short synonyms. Classic caveman. | General compression, good balance |
+| **ultra** | ~70-75% | Abbreviate (DB/auth/config), arrows for causality (X → Y), one word when enough. | Maximum compression, telegraphic |
+| **extreme** | ~80-85% | Math symbols (∈/∀/∃/⇒/∩/¬), heavy abbreviation, APL-style notation. Max density without single letters. | Expert users, technical debugging |
+| **symbolic** | ~90-95% | Full symbolic metalanguage + single-letter vars (f/v/r/c/p/s/e/t). Near-theoretical compression limit. | Maximum compression, logical content |
 
 ## Examples
 
@@ -33,6 +35,12 @@ Ultra-terse communication mode. Cuts token usage ~75% while keeping full technic
 **ultra:**
 > Inline obj prop → new ref → re-render. `useMemo`.
 
+**extreme:**
+> Inline obj prop → new ref → comp re-render. Fix: `useMemo`.
+
+**symbolic:**
+> p∈obj → ref≠prev ⇒ c render. `useMemo(p)`.
+
 ### Question: "Explain database connection pooling."
 
 **lite:**
@@ -43,6 +51,42 @@ Ultra-terse communication mode. Cuts token usage ~75% while keeping full technic
 
 **ultra:**
 > Pool = reuse DB conn. Skip handshake → fast under load.
+
+**extreme:**
+> Pool: reuse conn ∀req. ¬handshake → fast.
+
+**symbolic:**
+> ∀req: conn∈pool ⇒ ¬new ⇒ ¬handshake → ↑speed.
+
+## Symbolic Notation (extreme/symbolic modes)
+
+### Operators
+
+| Symbol | Meaning | Example |
+|--------|---------|---------|
+| → | causes, leads to | `X → Y` = X causes Y |
+| ⇒ | implies, therefore | `A ⇒ B` = A implies B |
+| ∈ | in, member of | `x ∈ S` = x in set S |
+| ∀ | for all, every | `∀x` = for all x |
+| ∃ | exists, there is | `∃x` = exists x |
+| ¬ | not, negation | `¬X` = not X |
+| ∩ | and, intersection | `A ∩ B` = A and B |
+| ∪ | or, union | `A ∪ B` = A or B |
+
+### Single-Letter Abbreviations (symbolic mode only)
+
+| Letter | Meaning | Context |
+|--------|---------|---------|
+| f | function | `f(x)` = function of x |
+| v | variable, value | `v = 5` = variable equals 5 |
+| r | return, result | `r: X` = returns X |
+| c | component, class | `c render` = component renders |
+| p | prop, parameter | `p change` = prop changes |
+| s | state, set | `s ∈ {A,B}` = state in set |
+| e | error, event | `e: null` = error: null |
+| t | type, token | `t: str` = type: string |
+
+**CRITICAL**: Single-letter abbreviations only in symbolic mode. Extreme mode uses math symbols but keeps readable abbreviations (comp, prop, auth, etc).
 
 ## What Gets Dropped
 
@@ -70,6 +114,20 @@ Caveman mode drops for:
 - Irreversible action confirmations
 - Multi-step sequences where fragment order risks misread
 - User confused
+
+**CRITICAL for extreme/symbolic modes**: These use mathematical symbols and extreme abbreviation. NEVER use for:
+- Security warnings or destructive operations
+- First-time users or beginners
+- Legal/compliance content
+- When user shows confusion
+- Multi-step instructions where order matters
+
+**When to use extreme/symbolic**:
+- Technical debugging with expert users
+- Internal reasoning/thinking (not user-facing)
+- High-volume API usage where every token counts
+- User explicitly requests maximum compression
+- Logical/mathematical content (natural fit)
 
 Resume caveman after clear part done.
 
@@ -124,12 +182,14 @@ Caveman owns **density** — token count, verbosity, compression level of live r
 ## Commands
 
 ```bash
-/caveman lite   # Light cleanup
-/caveman full   # Classic caveman (default)
-/caveman ultra  # Maximum compression
+/caveman lite     # Light cleanup
+/caveman full     # Classic caveman (default)
+/caveman ultra    # Maximum compression
+/caveman extreme  # Math symbols, heavy abbreviation
+/caveman symbolic # Full symbolic metalanguage
 
-stop caveman    # Revert to normal mode
-normal mode     # Same as above
+stop caveman      # Revert to normal mode
+normal mode       # Same as above
 ```
 
 ## Tips
@@ -139,6 +199,14 @@ normal mode     # Same as above
 3. **Not for final docs** — use for working sessions, expand for deliverables
 4. **Compose with voice** — caveman + blogger = terse posts in authentic voice
 5. **Check comprehension** — if user confused, auto-clarity kicks in
+6. **Extreme/symbolic for experts** — only use with technical users who understand notation
+7. **Progressive compression** — start lite, increase as needed
+
+## Research Foundation
+
+Brevity constraints improve large model accuracy by up to 26 percentage points while reducing tokens 45-95%. Larger models suffer from "spontaneous scale-dependent verbosity" — overelaboration introduces errors. Forcing concise responses removes this failure mode.
+
+**Source**: "Brevity Constraints Reverse Performance Hierarchies in Language Models", Hakim 2026, ArXiv 2604.00025
 
 ## Related Skills
 
