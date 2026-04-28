@@ -1,4 +1,3 @@
-<<<<<<< S:/AntiGravity_Skills/ml-engine/references/ablations.md
 # Reproducible Ablations
 
 ## Checklist
@@ -380,4 +379,3 @@ def capture_environment():
 - Don't forget to log git dirty status — uncommitted changes invalidate reproducibility
 - Don't use `torch.backends.cudnn.deterministic` on TPU (cuDNN is GPU-only)
 - Don't rely on default RNG states — always call `set_global_seed`
->>>>>>> C:/Users/shaur/.windsurf/worktrees/AntiGravity_Skills/AntiGravity_Skills-11bf4390/ml-engine/references/ablations.md

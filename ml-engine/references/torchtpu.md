@@ -1,4 +1,4 @@
-<<<<<<< S:/AntiGravity_Skills/ml-engine/references/torchtpu.md
+
 # torchtpu (PyTorch XLA TPU Framework)
 
 ## Overview
@@ -246,13 +246,3 @@ docker run --privileged --net host --shm-size=16G -it \
 - For single-host: `barrier=False` in `xm.optimizer_step()` is faster
 - For multi-host: `barrier=True` is required for gradient sync
 - Don't access XLA devices before `torch_xla.launch()` in multi-process mode
-<<<<<<< S:/AntiGravity_Skills/ml-engine/references/torchtpu.md
-<<<<<<< S:/AntiGravity_Skills/ml-engine/references/torchtpu.md
-<<<<<<< S:/AntiGravity_Skills/ml-engine/references/torchtpu.md
->>>>>>> C:/Users/shaur/.windsurf/worktrees/AntiGravity_Skills/AntiGravity_Skills-11bf4390/ml-engine/references/torchtpu.md
-=======
->>>>>>> C:/Users/shaur/.windsurf/worktrees/AntiGravity_Skills/AntiGravity_Skills-11bf4390/ml-engine/references/torchtpu.md
-=======
->>>>>>> C:/Users/shaur/.windsurf/worktrees/AntiGravity_Skills/AntiGravity_Skills-11bf4390/ml-engine/references/torchtpu.md
-=======
->>>>>>> C:/Users/shaur/.windsurf/worktrees/AntiGravity_Skills/AntiGravity_Skills-11bf4390/ml-engine/references/torchtpu.md

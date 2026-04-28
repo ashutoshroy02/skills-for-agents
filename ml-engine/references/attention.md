@@ -1,4 +1,3 @@
-<<<<<<< S:/AntiGravity_Skills/ml-engine/references/attention.md
 # Attention Kernels — Splash, Flash, SDPA on TPU
 
 ## Kernel Selection Decision Tree
@@ -349,4 +348,3 @@ def jax_flash_attention(q, k, v):
 - Don't call `attn_fn` with different `is_causal` per batch — XLA recompiles
 - Don't mix attention kernels in the same model — pick one and stick with it
 - Splash attention may require specific TPU software versions; check `torch_xla` version
->>>>>>> C:/Users/shaur/.windsurf/worktrees/AntiGravity_Skills/AntiGravity_Skills-11bf4390/ml-engine/references/attention.md

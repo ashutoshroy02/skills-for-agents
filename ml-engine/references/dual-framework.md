@@ -1,4 +1,3 @@
-<<<<<<< S:/AntiGravity_Skills/ml-engine/references/dual-framework.md
 # Dual-Framework Runtime — PT-XLA + JAX
 
 ## Philosophy
@@ -200,4 +199,3 @@ torch_xla.sync()  # Start PT-XLA ops again
 - Don't interop on every training step — batch JAX computations
 - Don't modify JAX array and expect PT tensor to update (they share memory but have different views)
 - Don't use JAX RNG (`jax.random`) without syncing seeds with PT-XLA
->>>>>>> C:/Users/shaur/.windsurf/worktrees/AntiGravity_Skills/AntiGravity_Skills-11bf4390/ml-engine/references/dual-framework.md

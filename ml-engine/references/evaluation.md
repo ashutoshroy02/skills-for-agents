@@ -1,4 +1,3 @@
-<<<<<<< S:/AntiGravity_Skills/ml-engine/references/evaluation.md
 # Evaluation Loops
 
 ## Online Evaluation (Within Training Loop)
@@ -334,4 +333,3 @@ def generate_sharded(model, input_ids, max_new_tokens=50):
 - Don't run eval on the full dataset every step — sample 1-10% or use fixed eval batches
 - Don't forget to aggregate metrics across devices — each core sees different data
 - Don't use `model.train()` before logging eval metrics — log first, then switch mode
->>>>>>> C:/Users/shaur/.windsurf/worktrees/AntiGravity_Skills/AntiGravity_Skills-11bf4390/ml-engine/references/evaluation.md

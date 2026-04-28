@@ -4,9 +4,9 @@ description: >
   TPU-first ML research engine for reproducible distributed training and ablation studies.
   Use for PyTorch-XLA, JAX, TPU, SPMD, GSPMD, MoE, router, Pallas, multi-pod training,
   FSDPv2, and sharded data pipelines.
-  Triggers on: TPU, v2-8, v3-8, v3-64, torch_xla, JAX, distributed, sharding, MoE,
+  Triggers on: TPU, v5e, v5e-8, v2-8, v3-8, v3-64, torch_xla, JAX, distributed, sharding, MoE,
   router, flash/splash attention, Pallas, custom kernel, SPMD, GSPMD, FSDPv2, torchax,
-  /ml, /ml-train, /ml-mesh, /ml-debug, /ml-benchmark, /ml-migrate, /ml-port,
+  Kaggle TPU, /ml, /ml-train, /ml-mesh, /ml-debug, /ml-benchmark, /ml-migrate, /ml-port,
   /ml-optimize, /ml-plan, /ml-ablate, /ml-checkpoint, /ml-profile.
 domain: process
 composable: true
@@ -15,7 +15,7 @@ yields_to: [craft, voice]
 
 # ml-engine
 
-TPU-first ML research engine. Builds reproducible distributed training pipelines for novel architecture ablations. PyTorch-XLA (torchtpu) is primary; JAX/torchax is first-class secondary. Targets v2-8 (primary), v3-8 (quota), v3-64 (multi-pod scaling). Uses modern `torch_xla` APIs: `torch_xla.step()`, `torch_xla.sync()`, `torch_xla.launch()`, `torch_xla.compile()`, FSDPv2, SPMD, `@assume_pure`, `scan_layers`.
+TPU-first ML research engine. Builds reproducible distributed training pipelines for novel architecture ablations. PyTorch-XLA (torchtpu) is primary; JAX/torchax is first-class secondary. Targets v5e-8 (primary, Kaggle + GCP), v3-8 (legacy quota), v3-64 (multi-pod scaling). Uses modern `torch_xla` APIs: `torch_xla.step()`, `torch_xla.sync()`, `torch_xla.launch()`, `torch_xla.compile()`, FSDPv2, SPMD, `@assume_pure`, `scan_layers`.
 
 ---
 
@@ -104,15 +104,16 @@ import numpy as np
 
 # Modern device access
 device = torch_xla.device()
-tpu_version = xm.get_tpu_env("TYPE", "v2-8")  # v2-8, v3-8, etc.
+tpu_version = xm.get_tpu_env("TYPE", "v5litepod-8")  # v5litepod-8, v3-8, v2-8, etc.
 
-# 1D mesh for data parallelism on v2-8 / v3-8
+# 1D mesh for data parallelism on v5e-8 / v3-8 / v2-8
 num_devices = xr.global_runtime_device_count()  # SPMD-aware
 mesh = xs.Mesh(np.arange(num_devices), (num_devices,), axis_names=("data",))
 xs.set_global_mesh(mesh)
 ```
 
 > See `references/tpu-setup.md` for single-host mesh, 2D sharding, and device placement.
+> See `references/tpu-v5e.md` for v5e-specific setup, Kaggle integration, and best practices.
 > See `references/torchtpu.md` for modern PyTorch XLA runtime (PJRT, torch.compile).
 > See `references/multi-pod-training.md` for v3-64, torchrun, and distributed checkpointing.
 
@@ -294,7 +295,7 @@ Auto-detect and select explicitly. Priority: Splash (v3+) → Flash → SDPA. Ne
 
 ```python
 def get_attention_fn(tpu_type):
-    if "v3" in tpu_type or "v4" in tpu_type or "v5" in tpu_type:
+    if "v5" in tpu_type or "v4" in tpu_type or "v3" in tpu_type:
         try:
             from torch_xla.experimental.splash_attention import splash_attention
             return splash_attention
@@ -307,7 +308,7 @@ def get_attention_fn(tpu_type):
         pass
     return torch.nn.functional.scaled_dot_product_attention
 
-attention_fn = get_attention_fn(xm.get_tpu_env("TYPE", "v2-8"))
+attention_fn = get_attention_fn(xm.get_tpu_env("TYPE", "v5litepod-8"))
 ```
 
 > See `references/attention.md` for kernel benchmarking and fallback rules.

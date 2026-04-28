@@ -1,4 +1,3 @@
-<<<<<<< S:/AntiGravity_Skills/ml-engine/references/data-pipeline.md
 # Data Pipeline — datasets Streaming with Sharding
 
 ## Streaming Setup
@@ -321,4 +320,3 @@ Rule: `buffer_size` ≈ `0.1%` of dataset size, capped at available RAM.
 - Don't forget `drop_last=True` on TPUs — padding uneven batches causes XLA recompilation per shape
 - Don't use `num_workers > 0` with `torch_xla` — it deadlocks
 - Don't load full dataset into RAM for large corpora (Pile, C4, etc.)
->>>>>>> C:/Users/shaur/.windsurf/worktrees/AntiGravity_Skills/AntiGravity_Skills-11bf4390/ml-engine/references/data-pipeline.md
