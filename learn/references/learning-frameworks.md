@@ -1,6 +1,6 @@
 # Learning Frameworks Reference
 
-This document provides deeper insights into the pedagogical frameworks that power the `study-guide` skill. Use these frameworks to structure your explanations and active validation sessions.
+This document provides deeper insights into the pedagogical frameworks that power the `learn` skill. Use these frameworks to structure your explanations and active validation sessions.
 
 ## 1. The Feynman Technique
 Use this when explaining highly complex, jargon-heavy topics.

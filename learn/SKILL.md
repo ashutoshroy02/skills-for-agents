@@ -1,5 +1,5 @@
 ---
-name: study-guide
+name: learn
 description: >
   Generates structured study plans and topic-wise guides. Use this whenever the user mentions learning something new, preparing for an exam, or needing a study guide, even if they just provide a syllabus or topics.
 domain: content
@@ -123,21 +123,21 @@ composable: true
 yields_to: [voice, density, craft]
 ```
 
-study-guide owns **content** — the actual educational substance, study plans, and topic explanations.
+learn owns **content** — the actual educational substance, study plans, and topic explanations.
 
-### When Study-Guide Leads
+### When Learn Leads
 
 - User asks for a study plan or guide.
 - User provides a syllabus to learn from.
 - User wants an explanation of a complex topic for learning purposes.
 
-### When Study-Guide Defers
+### When Learn Defers
 
-| Other Skill's Domain | What Study-Guide Does |
+| Other Skill's Domain | What Learn Does |
 |---------------------|------------------------|
-| **Voice** (e.g. blogger) | Study-guide structures the study material, but the voice skill controls the tone of the explanations (e.g., a casual, rant-style study guide). |
-| **Density** (e.g. caveman, compress) | Study-guide provides the full content, but defers to the density skill to shorten explanations or remove analogies if compression is requested. |
-| **Craft** (e.g. painter) | If outputting to a web UI or specific visual format, study-guide yields visual formatting to the craft skill. |
+| **Voice** (e.g. blogger) | Learn structures the study material, but the voice skill controls the tone of the explanations (e.g., a casual, rant-style study guide). |
+| **Density** (e.g. caveman, compress) | Learn provides the full content, but defers to the density skill to shorten explanations or remove analogies if compression is requested. |
+| **Craft** (e.g. painter) | If outputting to a web UI or specific visual format, learn yields visual formatting to the craft skill. |
 
 ### Layered Composition Rules
 
@@ -146,11 +146,11 @@ study-guide owns **content** — the actual educational substance, study plans, 
 
 ### Pipeline Behavior
 
-- **Upstream** (receives output from another skill): If a process skill extracts topics from a document, study-guide takes those topics and builds the learning plan.
-- **Downstream** (output feeds into another skill): Study-guide outputs the educational material, which can then be compressed or reformatted by downstream skills.
+- **Upstream** (receives output from another skill): If a process skill extracts topics from a document, learn takes those topics and builds the learning plan.
+- **Downstream** (output feeds into another skill): Learn outputs the educational material, which can then be compressed or reformatted by downstream skills.
 
 ### Conflict Signal
 
 If the user wants a study guide that conflicts with density preferences (e.g., "give me a detailed study guide but in caveman mode"):
 
-> `⚠️ Density conflict: study-guide wants detailed explanations, caveman wants minimal. [Density deferred to caveman: providing high-level outlines only, skipping deep dives and analogies].`
+> `⚠️ Density conflict: learn wants detailed explanations, caveman wants minimal. [Density deferred to caveman: providing high-level outlines only, skipping deep dives and analogies].`
