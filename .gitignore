@@ -1,1 +1,6 @@
 User Info Basic/
+*.zip
+.windsurf/
+memory/data/
+node_modules/
+docs-site/.vitepress/dist/
