@@ -244,6 +244,17 @@ After writing the skill, run these audits:
 
 ---
 
+## Subagent Fan-Out — Default Model Tiering
+
+When skill work fans out subagents — research sweeps, parallel audits, multi-file analysis during creation — tier the models by depth, *because* breadth of high-throughput leaf work is wasted if each leaf burns a frontier-model's budget:
+
+- **Level-1 (subagents you spawn directly): Opus** — the judgment that decides the skill (research synthesis, design, audit).
+- **Level-2+ (anything a level-1 agent spawns): Sonnet or Haiku** — bounded mechanical leaf work (one search, one file read, one check). Instruct each level-1 agent to spawn its own children on the cheaper tier.
+
+This is the **default, user-overridable** — if the user explicitly assigns models, honor that. When you **build a skill that itself fans out subagents**, bake this same default into it (level-1 Opus, level-2+ Sonnet/Haiku, user can override) so the convention propagates.
+
+---
+
 ## Skill Anti-Patterns
 
 > See `references/anti-patterns.md` for the full catalog of patterns to avoid and how to fix them.
