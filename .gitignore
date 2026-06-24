@@ -9,6 +9,7 @@ skills/memory/data/
 agents/
 docs-site/.vitepress/cache/
 __pycache__/
+*.stackdump
 
 # Local only
 research/

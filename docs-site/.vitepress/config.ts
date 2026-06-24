@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { version } from '../../package.json'
 
 export default defineConfig({
   title: 'Skills for Agents',
@@ -8,7 +9,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/skills-for-agents/logo.svg' }],
     ['meta', { property: 'og:title', content: 'Skills for Agents' }],
-    ['meta', { property: 'og:description', content: '18 composable skills for AI coding agents' }],
+    ['meta', { property: 'og:description', content: '21 composable skills for AI coding agents' }],
   ],
 
   themeConfig: {
@@ -19,7 +20,7 @@ export default defineConfig({
       { text: 'Skills', link: '/skills/' },
       { text: 'SIP', link: '/sip/' },
       {
-        text: 'v1.0.5',
+        text: `v${version}`,
         items: [
           { text: 'Changelog', link: 'https://github.com/IsNoobgrammer/skills-for-agents/releases' },
           { text: 'npm', link: 'https://www.npmjs.com/package/skills-for-agents' },
@@ -81,17 +82,20 @@ export default defineConfig({
           items: [
             { text: 'Painter', link: '/skills/painter' },
             { text: 'Harden', link: '/skills/harden' },
+            { text: 'Logo & Favicon', link: '/skills/logo-favicon' },
           ]
         },
         {
           text: 'Process',
           collapsed: false,
           items: [
+            { text: 'Autoresearcher', link: '/skills/autoresearcher' },
             { text: 'Memory', link: '/skills/memory' },
             { text: 'ML Engine', link: '/skills/ml-engine' },
             { text: 'Planner', link: '/skills/planner' },
             { text: 'Postmortem', link: '/skills/postmortem' },
             { text: 'Refactor', link: '/skills/refactor' },
+            { text: 'No Doubts', link: '/skills/no-doubts' },
             { text: 'Skill Creator', link: '/skills/skill-creator' },
             { text: 'Slidify', link: '/skills/slidify' },
           ]

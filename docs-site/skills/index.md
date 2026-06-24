@@ -1,6 +1,6 @@
 # Skills Catalog
 
-18 composable skills organized by domain. Each skill is a self-contained instruction set that works with any LLM agent.
+21 composable skills organized by domain. Each skill is a self-contained instruction set that works with any LLM agent.
 
 ## Voice
 
@@ -21,12 +21,15 @@
 |-------|-------------|----------|
 | [**Painter**](/skills/painter) | Max pro UI/UX design. Animation, color, typography, accessibility. 20+ commands. | `/painter`, "make it look pro", "fix the ui" |
 | [**Harden**](/skills/harden) | Production-harden code for 1M+ users. Caching, rate limiting, graceful shutdown. | "harden my code", "prepare for launch", "make it scalable" |
+| [**Logo & Favicon**](/skills/logo-favicon) | Find or generate logos, favicons, and SVGs. Cascades web search → free sites → programmatic SVG → AI last. | "logo", "favicon", "icon", "brand kit", "SVG" |
 
 ## Process
 
 | Skill | Description | Triggers |
 |-------|-------------|----------|
+| [**Autoresearcher**](/skills/autoresearcher) | Autonomous research loop that improves any measurable artifact against a frozen eval. Diagnosis-driven, four idea engines, self-iterating. | "optimize X", "push the score", "run autoresearch" |
 | [**Memory**](/skills/memory) | Persistent context engine. Daily journal rotation, manifest indexing, identity tracking. | Startup (mandatory), "I like X", "Here is my key" |
+| [**No Doubts**](/skills/no-doubts) | Relentless interview that stress-tests a plan/design and checkpoints every answer to a brainstorm file. | "grill me", "no doubts", "stress test this", "poke holes" |
 | [**ML Engine**](/skills/ml-engine) | TPU-first ML research. Distributed training, MoE, Pallas kernels. 12+ commands. | `/ml`, TPU mentions, distributed training |
 | [**Planner**](/skills/planner) | Project plans with PRDs, design docs, architecture flows, task breakdowns. | `/plan`, "create a PRD", "design the architecture" |
 | [**Postmortem**](/skills/postmortem) | Blameless incident documentation. 5 Whys, action items. | `/postmortem`, "incident review", "what broke and why" |

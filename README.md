@@ -6,9 +6,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Documentation](https://img.shields.io/badge/docs-live-brightgreen)](https://isnoobgrammer.github.io/skills-for-agents/)
-[![SIP Framework](https://img.shields.io/badge/framework-SIP-purple)](docs/sip.md)
+[![SIP Framework](https://img.shields.io/badge/framework-SIP-purple)](PROTOCOL.md)
 
-[Documentation](https://isnoobgrammer.github.io/skills-for-agents/) • [Getting Started](#quick-start) • [SIP Framework](docs/sip.md) • [Contributing](docs/contributing.md)
+[Documentation](https://isnoobgrammer.github.io/skills-for-agents/) • [Getting Started](#quick-start) • [SIP Framework](PROTOCOL.md) • [Contributing](https://isnoobgrammer.github.io/skills-for-agents/guide/contributing)
 
 </div>
 
@@ -120,12 +120,15 @@ Each skill is a self-contained folder with a `SKILL.md` file. Point your agent t
 |-------|-------------|----------|
 | **[Painter](skills/painter/)** | Max pro UI/UX design. Animation, color, typography, accessibility. 20+ commands. | `/painter`, "make it look pro", "fix the ui" |
 | **[Harden](skills/harden/)** | Production-harden code for 1M+ users. Caching, rate limiting, graceful shutdown. | "harden my code", "prepare for launch", "make it scalable" |
+| **[Logo & Favicon](skills/logo-favicon/)** | Find or generate logos, favicons, and SVGs. Cascades web search → free sites → programmatic SVG → AI last. | "logo", "favicon", "icon", "brand kit", "SVG" |
 
 ### Process
 
 | Skill | Description | Triggers |
 |-------|-------------|----------|
+| **[Autoresearcher](skills/autoresearcher/)** | Autonomous research loop that improves any measurable artifact against a frozen eval. Diagnosis-driven, four idea engines, self-iterating. | "optimize X", "push the score", "run autoresearch" |
 | **[Memory](skills/memory/)** | Persistent context engine. Daily journal rotation, manifest indexing, identity tracking. | Startup (mandatory), "I like X", "Here is my key" |
+| **[No Doubts](skills/no-doubts/)** | Relentless interview that stress-tests a plan/design and checkpoints every answer to a brainstorm file. | "grill me", "no doubts", "stress test this", "poke holes" |
 | **[ML Engine](skills/ml-engine/)** | TPU-first ML research. Distributed training, MoE, Pallas kernels. 12+ commands. | `/ml`, TPU mentions, distributed training |
 | **[Planner](skills/planner/)** | Project plans with PRDs, design docs, architecture flows, task breakdowns. | `/plan`, "create a PRD", "design the architecture" |
 | **[Postmortem](skills/postmortem/)** | Blameless incident documentation. 5 Whys, action items. | `/postmortem`, "incident review", "what broke and why" |
@@ -170,8 +173,8 @@ Skills Interoperability Protocol ensures every skill knows how to compose with o
 ### ⚡ Production-Ready
 Battle-tested skills for ML research, documentation, UI/UX, incident response, and more.
 
-### 🎨 18 Skills Included
-Blogger, Caveman, Compress, Documenter, Godmode, Harden, Learn, Memory, ML Engine, OSINT, Painter, Planner, Postmortem, Refactor, Researcher, Skill Creator, Slidify, Tritonify.
+### 🎨 21 Skills Included
+Autoresearcher, Blogger, Caveman, Compress, Documenter, Godmode, Harden, Learn, Logo & Favicon, Memory, ML Engine, No Doubts, OSINT, Painter, Planner, Postmortem, Refactor, Researcher, Skill Creator, Slidify, Tritonify.
 
 ### 🚀 Framework-Agnostic
 Drop into any agent framework. Works with any LLM that supports system prompts.
@@ -238,7 +241,7 @@ The **Skills Interoperability Protocol** is the composability contract that make
 4. Most recently invoked
 5. Specificity (narrow scope beats broad)
 
-[Read full SIP specification →](docs/sip.md)
+[Read full SIP specification →](PROTOCOL.md)
 
 ---
 
@@ -246,10 +249,9 @@ The **Skills Interoperability Protocol** is the composability contract that make
 
 - **[Live Documentation](https://isnoobgrammer.github.io/skills-for-agents/)** — Complete guides, API references, examples
 - **[Getting Started](https://isnoobgrammer.github.io/skills-for-agents/guide/getting-started)** — Installation and basic usage
-- **[SIP Framework](docs/sip.md)** — Composability contract and domain rules
+- **[SIP Framework](PROTOCOL.md)** — Composability contract and domain rules
 - **[Creating Skills](https://isnoobgrammer.github.io/skills-for-agents/guide/creating-skills)** — Build your own skills
-- **[Contributing Guide](docs/contributing.md)** — How to contribute to the ecosystem
-- **[Automation Bots](docs/bots.md)** — Automated PR review and validation
+- **[Contributing Guide](https://isnoobgrammer.github.io/skills-for-agents/guide/contributing)** — How to contribute to the ecosystem
 
 ---
 
@@ -263,7 +265,7 @@ We welcome contributions! Whether you're:
 - Enhancing documentation
 - Building tooling
 
-Please read our [Contributing Guide](docs/contributing.md) to get started.
+Please read our [Contributing Guide](https://isnoobgrammer.github.io/skills-for-agents/guide/contributing) to get started.
 
 ### Creating a New Skill
 
@@ -277,7 +279,7 @@ Or manually:
 
 1. Create a new folder with your skill name (kebab-case)
 2. Add a `SKILL.md` file with frontmatter declaring your domain
-3. Follow the [SIP Framework](docs/sip.md) composability rules
+3. Follow the [SIP Framework](PROTOCOL.md) composability rules
 4. Submit a PR with your skill
 
 
@@ -301,7 +303,7 @@ Built on the principles of:
 
 <div align="center">
 
-**[Documentation](https://isnoobgrammer.github.io/skills-for-agents/)** • **[SIP Framework](docs/sip.md)** • **[Contributing](docs/contributing.md)**
+**[Documentation](https://isnoobgrammer.github.io/skills-for-agents/)** • **[SIP Framework](PROTOCOL.md)** • **[Contributing](https://isnoobgrammer.github.io/skills-for-agents/guide/contributing)**
 
 Made with ❤️ by [Shaurya Sharthak](https://github.com/IsNoobgrammer)
 
