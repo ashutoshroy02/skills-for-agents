@@ -1,13 +1,11 @@
 ---
 name: postmortem
-description: >
-  Runs the full postmortem workflow: gathers incident context, writes a blameless postmortem
-  report, saves it to a `postmortem/` folder (gitignored), and creates action items.
-  Trigger on: "/postmortem", "write a postmortem", "incident review", "post-incident",
-  "blameless review", "what broke and why", "SEV1/SEV2 report", or any mention of needing
-  to document an outage, incident, or system failure. Always use this skill when the user
-  wants to review or document any kind of production incident — even if they just say
-  "help me write up what happened".
+description: >-
+  Runs the full postmortem workflow: gathers incident context, writes a blameless report to a
+  gitignored `postmortem/` folder, and creates action items. Use whenever the user wants to review
+  or document any production incident or outage. Triggers on: '/postmortem', 'write a postmortem',
+  'incident review', 'post-incident', 'blameless review', 'what broke and why', 'SEV1/SEV2
+  report', or 'help me write up what happened'.
 domain: process
 composable: true
 yields_to: []

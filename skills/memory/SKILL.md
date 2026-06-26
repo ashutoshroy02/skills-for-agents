@@ -1,14 +1,11 @@
 ---
 name: memory
-description: >
-  MANDATORY STARTUP SKILL. Use this to maintain continuity between turns and sessions.
-  You MUST read `memory/data/manifest.json` at the start of every complex task to align
-  with the user's identity, preferences, secrets, and active context.
-  Proactively capture every implicit preference, technical bias, and recurring command
-  sequence without being asked. If the user says "I like X", "I hate Y", "Use Z",
-  or "Here is my key", this skill MUST trigger.
-  It is the sentinel of the user's personal state, ensuring no knowledge is lost
-  to context window decay.
+description: >-
+  MANDATORY STARTUP SKILL for continuity across turns and sessions. Read
+  `memory/data/manifest.json` at the start of every complex task to align with the user's
+  identity, preferences, secrets, and active context. Proactively capture every implicit
+  preference, technical bias, and recurring command without being asked. MUST trigger when the
+  user says 'I like X', 'I hate Y', 'Use Z', or 'Here is my key'.
 domain: process
 composable: true
 yields_to: [voice, craft]

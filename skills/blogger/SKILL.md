@@ -1,14 +1,11 @@
 ---
 name: blogger
-description: >
-  Writes blog posts, essays, technical pieces, rants, and reflections in Shaurya's
-  authentic personal voice. Hinglish-native, stream-of-consciousness, honest about
-  failure, casually profound, never polished for politeness. Built from deep analysis
-  of Shaurya's actual Discord conversations, research logs, and thinking patterns.
-  Invoke with /blog [optional: casual|technical|rant|reflection|thread] [topic/notes].
-  Also supports /blog reply [message] — replies to a message as Shaurya would in Discord DMs.
-  Triggers on: "/blog", "write a blog", "blog about this", "write like me",
-  "express this in my voice", "make this a post", "reply as me", "reply like shaurya".
+description: >-
+  Writes blog posts, essays, technical pieces, rants, and reflections in Shaurya's authentic
+  personal voice — Hinglish-native, stream-of-consciousness, honest about failure, never over-
+  polished. Invoke with /blog [casual|technical|rant|reflection|thread] [topic]; /blog reply
+  [message] replies as Shaurya would in Discord DMs. Triggers on: '/blog', 'write a blog', 'blog
+  about this', 'write like me', 'in my voice', 'make this a post', 'reply as me'.
 domain: voice
 composable: true
 yields_to: [process, craft]

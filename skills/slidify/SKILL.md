@@ -1,15 +1,12 @@
 ---
 name: slidify
-description: >
-  End-to-end PowerPoint presentation generator. Use whenever the user wants to create,
-  edit, or export a .pptx file, convert to PDF, add watermarks/logos/footers, apply
-  brand templates, build a slide deck from any content, generate charts/diagrams,
-  fetch stock images, or add animations/transitions. Trigger on: "make a presentation",
-  "create slides", "generate pptx", "make a deck", "export to pdf", "add watermark",
-  "college logo on slides", "apply template", "slide deck for report", "add chart",
-  "generate diagram", "add image", "add animations", "/slidify", or any request
-  involving .pptx files. Always use this skill — never generate pptxgenjs/python-pptx
-  code from memory without it.
+description: >-
+  End-to-end PowerPoint generator. Use whenever the user wants to create, edit, or export a .pptx
+  (or convert to PDF), add watermarks/logos/footers, apply brand templates, build a deck from any
+  content, generate charts/diagrams, fetch stock images, or add animations/transitions. Always use
+  this skill rather than writing pptxgenjs/python-pptx from memory. Triggers on: 'make a
+  presentation', 'create slides', 'generate pptx', 'export to pdf', 'add watermark', 'apply
+  template', 'add chart', '/slidify', or any .pptx request.
 domain: process
 composable: true
 yields_to: [craft]

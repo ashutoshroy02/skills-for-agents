@@ -1,14 +1,12 @@
 ---
 name: skill-creator
-description: >
-  Creates new skills, improves existing skills, and ensures SIP compliance across the skill
-  ecosystem. Use this skill whenever the user wants to create a skill from scratch, turn a
-  workflow into a skill, edit or refactor an existing skill, audit a skill for quality,
-  add SIP composability to a skill, or discuss skill architecture and best practices.
-  Triggers on: "/create-skill", "make a skill", "turn this into a skill", "new skill",
-  "skill for X", "improve this skill", "audit this skill", "skill creator".
-  Also trigger when the user describes a repeatable workflow and says "I wish this was automatic"
-  or "can you remember this" — that's a skill waiting to be born.
+description: >-
+  Creates new skills, improves/refactors/audits existing ones, and ensures SIP compliance across
+  the ecosystem. Use whenever the user wants to create a skill from scratch, turn a workflow into
+  a skill, edit or audit a skill, add SIP composability, or discuss skill architecture — including
+  when they describe a repeatable workflow and say 'I wish this was automatic'. Triggers on:
+  '/create-skill', 'make a skill', 'turn this into a skill', 'new skill', 'improve this skill',
+  'audit this skill'.
 domain: process
 composable: true
 yields_to: []
@@ -142,7 +140,11 @@ yields_to: [process, craft]
 ## Boundaries
 [What this skill does NOT do. Hard edges.]
 
-## Compo## Instruction Psychology — The 12 Rules
+## Composability
+[How this skill composes with other skills — the SIP section. See Phase 3.]
+```
+
+## Instruction Psychology — The 12 Rules
 
 Every skill must follow these 12 rules, backed by research from LangGPT, OpenAI, Anthropic, and the AgentIF benchmark.
 

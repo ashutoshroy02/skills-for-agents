@@ -1,15 +1,12 @@
 ---
 name: autoresearcher
 description: >-
-  Autonomous research loop that improves ANY measurable artifact — a prompt, a
-  scoring config, weights, an algorithm, a heuristic, a code block — against a
-  frozen evaluation, by diagnosing where it fails and dispatching four idea
-  engines (novel, tangential/cross-domain, baseline-improvement, diagnosis) in a
-  self-iterating generate→eval→keep loop that runs until a stopping condition is
-  met. Use when the user asks to optimize, improve, push the score on, or run
-  autoresearch on anything with a measurable objective — code, models, prompts,
-  pipelines, parameters — especially when they want it to run autonomously and
-  keep going on its own.
+  Autonomous research loop that improves ANY measurable artifact (prompt, scoring config, weights,
+  algorithm, heuristic, code) against a frozen evaluation: diagnoses failures and dispatches four
+  idea engines (novel, cross-domain, baseline-improvement, diagnosis) in a self-iterating
+  generate→eval→keep loop until a stopping condition holds. Use when the user wants to optimize,
+  improve, push the score on, or run autoresearch on anything with a measurable objective —
+  especially autonomously.
 domain: process
 composable: true
 yields_to: []

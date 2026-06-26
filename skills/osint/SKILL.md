@@ -1,17 +1,13 @@
 ---
 name: osint
-description: >
-  Open Source Intelligence (OSINT) engine — the viral investigator. Takes one identifier
-  (email, phone, name, username, company, IP, domain) and recursively discovers EVERYTHING:
-  social media accounts, leaked credentials, workplace, location, network infrastructure,
-  exposed documents, dark web presence, and more. Every discovery spawns new investigations.
-  Triggers on: "osint", "recon", "intelligence", "background check", "investigate",
-  "find info on", "look up", "search for", "whois", "enumerate", "discover",
-  "email lookup", "phone lookup", "username search", "breach check", "leak check",
-  "social media search", "people search", "company research", "domain recon",
-  "subdomain enum", "port scan", "google dork", "dark web search", "doxx", "dox",
-  "find everything about", "stalk", "dig up", "trace", "track down".
-  Also triggers when user provides a target identifier and wants to know "everything" about it.
+description: >-
+  Open Source Intelligence (OSINT) engine. Takes one identifier (email, phone, name, username,
+  company, IP, domain) and recursively discovers everything: social accounts, leaked credentials,
+  workplace, location, network infrastructure, exposed documents, and dark web presence — each
+  discovery spawning new leads. Triggers on: 'osint', 'recon', 'background check', 'investigate',
+  'find info on', 'look up', 'whois', 'breach/leak check', 'username/email/phone lookup',
+  'subdomain enum', 'google dork', 'doxx', 'trace', 'find everything about', or any target
+  identifier the user wants to know everything about.
 domain: analysis
 composable: true
 yields_to: [process]

@@ -1,13 +1,12 @@
 ---
 name: painter
-description: >
-  Impeccable UI/UX design skill. Handles visual design, animation, color psychology,
-  typography, layout, interaction design, accessibility, Three.js/WebGL, scroll effects,
-  design systems, dashboard design, hero sections, micro-interactions, and 15+ design
-  styles (glassmorphism, brutalism, neumorphism, etc.). Use when user asks to design,
-  build, fix, or audit UI. Trigger on: "/painter", "make it look good", "design this",
-  "fix the ui", "hero section", "dashboard", "animation", "scroll effects", "three.js",
-  "shader", "color palette", "typography", "responsive", "accessibility audit".
+description: >-
+  Impeccable UI/UX design skill: visual design, animation, color, typography, layout, interaction
+  design, accessibility, Three.js/WebGL, scroll effects, design systems, and 15+ styles
+  (glassmorphism, brutalism, neumorphism, etc.). Use when the user wants to design, build, fix, or
+  audit UI. Trigger on: '/painter', 'make it look good', 'design this', 'fix the ui', 'hero
+  section', 'dashboard', 'animation', 'three.js', 'shader', 'color palette', 'responsive',
+  'accessibility audit'.
 domain: craft
 composable: true
 yields_to: [voice, process]

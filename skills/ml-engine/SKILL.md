@@ -1,13 +1,11 @@
 ---
 name: ml-engine
-description: >
-  TPU-first ML research engine for reproducible distributed training and ablation studies.
-  Use for PyTorch-XLA, JAX, TPU, SPMD, GSPMD, MoE, router, Pallas, multi-pod training,
-  FSDPv2, and sharded data pipelines.
-  Triggers on: TPU, v5e, v5e-8, v2-8, v3-8, v3-64, torch_xla, JAX, distributed, sharding, MoE,
-  router, flash/splash attention, Pallas, custom kernel, SPMD, GSPMD, FSDPv2, torchax,
-  Kaggle TPU, /ml, /ml-train, /ml-mesh, /ml-debug, /ml-benchmark, /ml-migrate, /ml-port,
-  /ml-optimize, /ml-plan, /ml-ablate, /ml-checkpoint, /ml-profile.
+description: >-
+  TPU-first ML research engine for reproducible distributed training and ablation studies. Use for
+  PyTorch-XLA, JAX, TPU (v5e/v3/v2 pods), SPMD/GSPMD, FSDPv2, MoE/router, Pallas custom kernels,
+  flash/splash attention, and sharded data pipelines. Triggers on: TPU, torch_xla, JAX,
+  distributed, sharding, MoE, Pallas, SPMD, multi-pod, Kaggle TPU, and the /ml, /ml-train, /ml-
+  debug, /ml-ablate (etc.) commands.
 domain: process
 composable: true
 yields_to: [craft, voice]

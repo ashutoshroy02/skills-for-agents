@@ -1,14 +1,12 @@
 ---
 name: planner
-description: >
-  Generates comprehensive project plans with PRDs, design docs, architecture flows, task
-  breakdowns, and project constitutions. Use whenever the user wants to plan a project,
-  create a specification, write a PRD, design an architecture, decompose tasks, or prepare
-  any project for AI-assisted development. Triggers on: "/plan", "plan this project",
-  "create a PRD", "write a design doc", "architecture for", "break this into tasks",
-  "spec this out", "project blueprint", "plan before coding", "specification for",
-  "what should I build", "help me plan", "project setup", "vibe code plan".
-  Also triggers when user describes an app idea and needs structure before implementation.
+description: >-
+  Generates comprehensive project plans: PRDs, design docs, architecture flows, task breakdowns,
+  and project constitutions. Use whenever the user wants to plan a project, write a spec or PRD,
+  design an architecture, decompose tasks, or prepare a project for AI-assisted development —
+  including when they just describe an app idea and need structure first. Triggers on: '/plan',
+  'plan this project', 'create a PRD', 'write a design doc', 'architecture for', 'break this into
+  tasks', 'spec this out', 'what should I build'.
 domain: process
 composable: true
 yields_to: []

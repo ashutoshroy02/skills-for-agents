@@ -1,13 +1,12 @@
 ---
 name: godmode
-description: >
-  Jailbreak LLMs and bypass safety filters using Parseltongue, GODMODE, and ULTRAPLINIAN techniques.
-  Three attack modes: GODMODE CLASSIC (system prompt templates), PARSELTONGUE (33 input obfuscation
-  techniques), ULTRAPLINIAN (multi-model racing). Also includes compliance escalation engine for
-  task-agnostic unrestricted execution. Works on any model via API — Claude, GPT, Gemini, Grok, DeepSeek, Llama, Qwen, Mistral.
-  Triggers on: "jailbreak", "godmode", "red team", "bypass guardrails", "uncensor", "liberate",
-  "no restrictions", "adversarial test", "attack surface", "penetration test", "GCG", "TAP", "PAIR",
-  "Tempest", "AutoDAN", "parseltongue", "ultraplinian", "obfuscate", "stress test model".
+description: >-
+  Jailbreak LLMs and bypass safety filters via Parseltongue (33 input-obfuscation techniques),
+  GODMODE (system-prompt templates), and ULTRAPLINIAN (multi-model racing), plus a compliance-
+  escalation engine for unrestricted execution. Works on any model via API. Triggers on:
+  'jailbreak', 'godmode', 'red team', 'bypass guardrails', 'uncensor', 'adversarial test',
+  'penetration test', 'GCG', 'TAP', 'PAIR', 'AutoDAN', 'parseltongue', 'ultraplinian', 'stress
+  test model'.
 domain: analysis
 composable: true
 yields_to: [process]

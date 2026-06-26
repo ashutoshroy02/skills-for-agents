@@ -1,15 +1,12 @@
 ---
 name: researcher
-description: >
-  Deep web research skill. Use when user asks to "research X", "find info about Y",
-  "what's the latest on Z", "look up", "investigate", "gather context on", or mentions
-  needing current information about tech, hardware, libraries, frameworks, tools, or
-  academic topics. Triggers on: research, investigate, find out, look up, what's new,
-  latest info, how does X work, compare X vs Y, gather context, deep dive, explore topic.
-  Understands user's end goal (context feed, report, overview, comparison) and adapts
-  search depth accordingly. Prioritizes diverse sources: official docs, GitHub repos,
-  blogs (especially Chinese tech blogs for hardware/ML ablations), academic papers,
-  community discussions, benchmarks, and video content (Bilibili, YouTube).
+description: >-
+  Deep web research skill. Understands the end goal (context feed, report, overview, comparison)
+  and adapts search depth, prioritizing diverse sources: official docs, GitHub, blogs (incl.
+  Chinese tech blogs for hardware/ML ablations), papers, benchmarks, and video (Bilibili,
+  YouTube). Triggers on: 'research X', 'find info about Y', "what's the latest on Z", 'look up',
+  'investigate', 'gather context', 'deep dive', 'compare X vs Y', or needing current info on tech,
+  libraries, frameworks, or academic topics.
 domain: content
 composable: true
 yields_to: [process, voice]
