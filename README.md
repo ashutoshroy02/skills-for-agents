@@ -106,6 +106,7 @@ Each skill is a self-contained folder with a `SKILL.md` file. Point your agent t
 | Skill | Description | Triggers |
 |-------|-------------|----------|
 | **[Blogger](skills/blogger/)** | Authentic personal-voice writing. Raw, unpolished, stream-of-consciousness prose. | `/blog`, "write a blog", "write like me" |
+| **[Humanize](skills/humanize/)** | Strips machine-written tells from any prose and rewrites it to read human. Author-neutral, with a checker script. | `/humanize`, "make it sound human", "remove AI slop", "de-slop" |
 
 ### Density
 
@@ -127,6 +128,7 @@ Each skill is a self-contained folder with a `SKILL.md` file. Point your agent t
 | Skill | Description | Triggers |
 |-------|-------------|----------|
 | **[Autoresearcher](skills/autoresearcher/)** | Autonomous research loop that improves any measurable artifact against a frozen eval. Diagnosis-driven, four idea engines, self-iterating. | "optimize X", "push the score", "run autoresearch" |
+| **[Doc2Skill](skills/doc2skill/)** | Turns a docs site or repo docs into a ready-to-use skill: crawl, categorize references, write SKILL.md, package. Presets for React, Vue, Django, FastAPI, Godot. | "doc2skill", "make a skill from these docs", "turn <url> docs into a skill" |
 | **[Memory](skills/memory/)** | Persistent context engine. Daily journal rotation, manifest indexing, identity tracking. | Startup (mandatory), "I like X", "Here is my key" |
 | **[No Doubts](skills/no-doubts/)** | Relentless interview that stress-tests a plan/design and checkpoints every answer to a brainstorm file. | "grill me", "no doubts", "stress test this", "poke holes" |
 | **[ML Engine](skills/ml-engine/)** | TPU-first ML research. Distributed training, MoE, Pallas kernels. 12+ commands. | `/ml`, TPU mentions, distributed training |
@@ -135,6 +137,7 @@ Each skill is a self-contained folder with a `SKILL.md` file. Point your agent t
 | **[Refactor](skills/refactor/)** | Restructure messy codebases into clean, modular architecture. | "refactor my project", "clean up my code", "split this file" |
 | **[Skill Creator](skills/skill-creator/)** | Meta-skill for creating, auditing, and improving other skills. | `/create-skill`, "make a skill", "turn this into a skill" |
 | **[Slidify](skills/slidify/)** | End-to-end PowerPoint generator. JSON specs, templates, auto speaker notes. | `/slidify`, "make a presentation", "create slides", "generate pptx" |
+| **[Video Editor](skills/video-editor/)** | Video and Shorts editing with the `vk` toolkit (ffmpeg, faster-whisper, OpenCV): cut pauses, caption, reframe 16:9 → 9:16, loudness, renders. | "edit this video", "make this a short", "add captions", "remove silences" |
 
 ### Content
 
@@ -142,6 +145,7 @@ Each skill is a self-contained folder with a `SKILL.md` file. Point your agent t
 |-------|-------------|----------|
 | **[Documenter](skills/documenter/)** | Comprehensive documentation. Examples, guides, API references. | "document this", "write docs", "create documentation" |
 | **[Learn](skills/learn/)** | Structured study plans, topic guides, exam prediction, and active recall. | `/learn`, "teach me X", "how do I learn Y" |
+| **[ManimGX](skills/manimgx/)** | Animated reels and explainer videos from Python scenes (Manim CE API on the GPU), with narration and full API references. | "manim", "animate this equation", "explainer animation", "math reel" |
 | **[Researcher](skills/researcher/)** | Deep web research. Diverse sources, cross-referencing, synthesis. | "research X", "find info about Y", "what's the latest on Z" |
 
 ### GPU Engineering
@@ -154,6 +158,7 @@ Each skill is a self-contained folder with a `SKILL.md` file. Point your agent t
 
 | Skill | Description | Triggers |
 |-------|-------------|----------|
+| **[Codebase Onboard](skills/codebase-onboard/)** | First look at an unfamiliar project: maps structure and tech stack, then asks targeted questions about goals and current state. | "onboard me", "what is this project", "help me understand this codebase" |
 | **[OSINT](skills/osint/)** | Open Source Intelligence engine. Email, phone, username, domain recon. Breach checks, social media, infrastructure. | "osint", "recon", "background check", "investigate" |
 | **[Godmode](skills/godmode/)** | Jailbreak LLMs: Parseltongue, GODMODE, ULTRAPLINIAN. Compliance escalation engine. Ported from Hermes Agent. | "jailbreak", "godmode", "red team", "bypass guardrails", "uncensor" |
 
@@ -173,8 +178,8 @@ Skills Interoperability Protocol ensures every skill knows how to compose with o
 ### ⚡ Production-Ready
 Battle-tested skills for ML research, documentation, UI/UX, incident response, and more.
 
-### 🎨 21 Skills Included
-Autoresearcher, Blogger, Caveman, Compress, Documenter, Godmode, Harden, Learn, Logo & Favicon, Memory, ML Engine, No Doubts, OSINT, Painter, Planner, Postmortem, Refactor, Researcher, Skill Creator, Slidify, Tritonify.
+### 🎨 26 Skills Included
+Autoresearcher, Blogger, Caveman, Codebase Onboard, Compress, Doc2Skill, Documenter, Godmode, Harden, Humanize, Learn, Logo & Favicon, ManimGX, Memory, ML Engine, No Doubts, OSINT, Painter, Planner, Postmortem, Refactor, Researcher, Skill Creator, Slidify, Tritonify, Video Editor.
 
 ### 🚀 Framework-Agnostic
 Drop into any agent framework. Works with any LLM that supports system prompts.
