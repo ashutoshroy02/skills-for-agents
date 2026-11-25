@@ -130,6 +130,7 @@ Each skill is a self-contained folder with a `SKILL.md` file. Point your agent t
 | **[Autoresearcher](skills/autoresearcher/)** | Autonomous research loop that improves any measurable artifact against a frozen eval. Diagnosis-driven, four idea engines, self-iterating. | "optimize X", "push the score", "run autoresearch" |
 | **[Doc2Skill](skills/doc2skill/)** | Turns a docs site or repo docs into a ready-to-use skill: crawl, categorize references, write SKILL.md, package. Presets for React, Vue, Django, FastAPI, Godot. | "doc2skill", "make a skill from these docs", "turn <url> docs into a skill" |
 | **[Memory](skills/memory/)** | Persistent context engine. Daily journal rotation, manifest indexing, identity tracking. | Startup (mandatory), "I like X", "Here is my key" |
+| **[Meta Instagram DM](skills/meta-instagram-dm/)** | Connects a backend to Instagram DMs through Meta's Unified login (new apps no longer get Instagram login): portfolio, testers, never-expiring token, webhook, subscriptions, a check after every step, then App Review and Live. Includes a secret-safe check script. | "Instagram DM bot", "Instagram webhook", "Meta app setup", "Unified login", "instagram_manage_messages" |
 | **[No Doubts](skills/no-doubts/)** | Relentless interview that stress-tests a plan/design and checkpoints every answer to a brainstorm file. | "grill me", "no doubts", "stress test this", "poke holes" |
 | **[ML Engine](skills/ml-engine/)** | TPU-first ML research. Distributed training, MoE, Pallas kernels. 12+ commands. | `/ml`, TPU mentions, distributed training |
 | **[Planner](skills/planner/)** | Project plans with PRDs, design docs, architecture flows, task breakdowns. | `/plan`, "create a PRD", "design the architecture" |
@@ -178,8 +179,8 @@ Skills Interoperability Protocol ensures every skill knows how to compose with o
 ### ⚡ Production-Ready
 Battle-tested skills for ML research, documentation, UI/UX, incident response, and more.
 
-### 🎨 26 Skills Included
-Autoresearcher, Blogger, Caveman, Codebase Onboard, Compress, Doc2Skill, Documenter, Godmode, Harden, Humanize, Learn, Logo & Favicon, ManimGX, Memory, ML Engine, No Doubts, OSINT, Painter, Planner, Postmortem, Refactor, Researcher, Skill Creator, Slidify, Tritonify, Video Editor.
+### 🎨 27 Skills Included
+Autoresearcher, Blogger, Caveman, Codebase Onboard, Compress, Doc2Skill, Documenter, Godmode, Harden, Humanize, Learn, Logo & Favicon, ManimGX, Memory, Meta Instagram DM, ML Engine, No Doubts, OSINT, Painter, Planner, Postmortem, Refactor, Researcher, Skill Creator, Slidify, Tritonify, Video Editor.
 
 ### 🚀 Framework-Agnostic
 Drop into any agent framework. Works with any LLM that supports system prompts.
